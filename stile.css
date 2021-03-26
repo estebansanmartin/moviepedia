@@ -5,17 +5,22 @@
     margin: 0;
 }
 body {
-    background-color: #0d1b2a;
+    background: #10002b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #10002b, #240046, #10002b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #10002b, #240046, #10002b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 .navbar {
-    background-color: #0d1b2a !important;
+    background-color: transparent !important;
 }
 .logo {
-    font-size: xx-large;
+    font-size: 3em;
     font-family: 'Raleway', sans-serif;
-    letter-spacing: 7px;
-    font-weight: 300;
+    letter-spacing: 8px;
+    font-weight: 700;
     margin-left: 1em !important;
+    color: #28026e;
+    text-decoration: line-through;
 }
 form {
     padding: 1rem;
@@ -23,7 +28,9 @@ form {
     display: flex;
 }
 input {
-    background-color: #1b263b !important;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0f0c29, #240046, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0f0c29, #240046, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 input:focus, ::placeholder {
     color: #3d5a80 !important;
@@ -33,10 +40,13 @@ input:focus, ::placeholder {
 }
 .tag {
     margin-left: 0;
-    background-color: #0d1b2a !important;
+    background-color: #3a0ca3 !important;
     color: #3d5a80 !important;
-    display: flex !important;
     margin-top: 10px !important;
+}
+.vote {
+    background-color: #220061 !important;
+    color: #3d5a80 !important;
 }
 main {
     display: flex;
@@ -51,14 +61,17 @@ main {
     overflow: hidden;
 }
 .card {
-    background-color: #1b263b !important;
+    background: #10002b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #10002b, #240046, #10002b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #10002b, #240046, #10002b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .card-title {
     font-family: 'Raleway', sans-serif;
     font-size: x-large;
     letter-spacing: 3px;
-    font-weight: 700;
+    font-weight: 500;
     text-transform: uppercase;
+    letter-spacing: 4px;
 }
 .card-text {
     display: flex;
@@ -66,4 +79,13 @@ main {
     font-family: 'Roboto Mono', monospace;
     font-size: medium;
     font-weight: 300;
+    padding: 5px;
+    letter-spacing: 3px;
+}
+.card-date {
+    font-family: 'Roboto Mono', monospace;
+    font-size: larger;
+    font-weight: 300;
+    padding: 5px;
+    letter-spacing: 2px;
 }
