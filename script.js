@@ -1,6 +1,6 @@
-const APIURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=de92bb5164ad39410973ec6c0cc92117&page=1";
+const APIURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=de92bb5164ad39410973ec6c0cc92117&page=1&language=it";
 const IMAGE = "https://image.tmdb.org/t/p/w1280";
-const SEARCHAPI = "https://api.themoviedb.org/3/search/movie?&api_key=de92bb5164ad39410973ec6c0cc92117&query=";
+const SEARCHAPI = "https://api.themoviedb.org/3/search/movie?&api_key=de92bb5164ad39410973ec6c0cc92117&language=it&query=";
 
 const main = document.getElementById('main');
 const form = document.getElementById('form');
@@ -23,7 +23,7 @@ function verMovies(movies) {
 
     movies.forEach((movie) => {
         //destructuring de la api que voy a usar
-        const { poster_path, title, original_title, overview, vote_average} = movie;
+        const { poster_path, title, original_title, overview, vote_average, vote_count, release_date} = movie;
         //elemento a estampar en pantalla, card
         const movieEl = document.createElement("div");
 
@@ -39,8 +39,10 @@ function verMovies(movies) {
             <div class="card-content">
                 <div class="media-content">
                     <p class="card-title">${title}</p>
+                    <p class="card-date">${"Premiere: "+release_date}</p>
                     <p class="card-text">${overview}</p>
-                    <span class="tag is-medium">${vote_average}</span>
+                    <span class="tag vote is-medium">${"Valutazione: "+vote_average}</span>
+                    <span class="tag is-medium">${"Voti: "+vote_count}</span>
                 </div>
             </div>
         </div>
